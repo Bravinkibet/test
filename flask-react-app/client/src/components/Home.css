@@ -1,7 +1,42 @@
 .home-container {
-    background-color: #2b1a1a; /* Dark red */
-    color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
+    background-color: #4b0f0f; /* Dark red */
+    color: white;
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #1e90ff; /* Blue for accent */
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .home-links {
+    display: flex;
+    gap: 20px; /* Spacing between buttons */
+  }
+  
+  .home-link {
+    background-color: #1e90ff; /* Blue button background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-link:hover {
+    background-color: #0044cc; /* Darker blue on hover */
   }
   

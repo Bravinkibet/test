@@ -1,15 +1,15 @@
 import React from "react";
-import "./Home.css"; // Ensure this CSS file exists and matches your styling.
+import "./Home.css";
 
 const Home = () => {
   return (
     <div className="home-container">
       <h1>Welcome to Our Store</h1>
-      <p>Discover amazing products designed just for you!</p>
-      <ul>
-        <li><a href="/products">View Products</a></li>
-        <li><a href="/about">About Us</a></li>
-      </ul>
+      <p>Explore amazing products and meet people!</p>
+      <div className="home-links">
+        <a href="/products" className="home-link">View Products</a>
+        <a href="/login" className="home-link">Login</a>
+      </div>
     </div>
   );
 };

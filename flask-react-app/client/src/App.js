@@ -2,15 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Login from "./components/Login";
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-        {/* Navbar can go here if you want */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
