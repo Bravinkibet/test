@@ -4,12 +4,21 @@ import "./Signup.css";
 const Signup = () => {
   return (
     <div className="signup-container">
+      <h2>Sign Up</h2>
       <form>
-        <h1>Create an Account</h1>
-        <input type="text" placeholder="Username" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Signup</button>
+        <label>
+          Name:
+          <input type="text" placeholder="Enter your name" />
+        </label>
+        <label>
+          Email:
+          <input type="email" placeholder="Enter your email" />
+        </label>
+        <label>
+          Password:
+          <input type="password" placeholder="Enter your password" />
+        </label>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );

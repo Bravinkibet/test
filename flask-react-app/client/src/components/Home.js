@@ -1,48 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
-import Login from "./Login";
-import Signup from "./Signup";
 
-const Home = () => {
-  const [isLoginOpen, setLoginOpen] = useState(false);
-  const [isSignupOpen, setSignupOpen] = useState(false);
-
-  const closeModals = () => {
-    setLoginOpen(false);
-    setSignupOpen(false);
-  };
-
+const Home = ({ toggleLogin, toggleSignup }) => {
   return (
-    <div className={`home-container ${isLoginOpen || isSignupOpen ? "blur" : ""}`}>
+    <div className="home-container">
       <header className="home-header">
-        <h1>Welcome to Our Store</h1>
+        <div className="home-title">
+          <h1>Welcome to The Store</h1>
+          <p>Your one-stop shop for exclusive products & connections</p>
+        </div>
         <div className="auth-buttons">
-          <button onClick={() => setLoginOpen(true)}>Log In</button>
-          <button onClick={() => setSignupOpen(true)}>Sign Up</button>
+          <button className="login-btn" onClick={toggleLogin}>
+            Log In
+          </button>
+          <button className="signup-btn" onClick={toggleSignup}>
+            Sign Up
+          </button>
         </div>
       </header>
-      <p>Explore amazing products and meet people!</p>
-      <div className="home-links">
-        <a href="/products" className="home-link">View Products</a>
-      </div>
-
-      {/* Login Modal */}
-      {isLoginOpen && (
-        <div className="modal-overlay" onClick={closeModals}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <Login />
+      <main className="home-main">
+        <section className="intro-section">
+          <h2>Explore Our Features</h2>
+          <p>Shop unique products, connect with others, and enjoy exclusive offers.</p>
+        </section>
+        <section className="highlights">
+          <div className="highlight-item">
+            <h3>Lingerie</h3>
+            <p>Premium quality, stylish, and comfortable.</p>
           </div>
-        </div>
-      )}
-
-      {/* Signup Modal */}
-      {isSignupOpen && (
-        <div className="modal-overlay" onClick={closeModals}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <Signup />
+          <div className="highlight-item">
+            <h3>Sex Toys</h3>
+            <p>Discreet, affordable, and fun options for everyone.</p>
           </div>
-        </div>
-      )}
+          <div className="highlight-item">
+            <h3>CBD & Cannabis</h3>
+            <p>Top-notch, discounted, and legit products.</p>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };

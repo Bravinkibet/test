@@ -1,49 +1,39 @@
-/* src/components/Login.css */
-
 .login-container {
-    background-color: #4b0f0f; /* Dark red */
-    color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    margin: auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  h2 {
-    color: #1e90ff; /* Blue accent */
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+  form {
+    display: flex;
+    flex-direction: column;
   }
   
   label {
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #4b0f0f;
   }
   
   input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    padding: 8px;
+    margin-top: 5px;
     border: 1px solid #ddd;
+    border-radius: 5px;
   }
   
   button {
-    background-color: #1e90ff; /* Blue */
-    color: #fff;
+    background-color: #1e90ff;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    margin-top: 20px;
     cursor: pointer;
-    width: 100%;
   }
   
   button:hover {
-    background-color: #0044cc; /* Darker blue */
+    background-color: #0044cc;
   }
   

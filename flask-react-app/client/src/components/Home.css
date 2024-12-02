@@ -1,75 +1,105 @@
-/* Base styles */
+/* General Home Page Styling */
 .home-container {
-    text-align: center;
-    padding: 50px;
-    background-color: #4b0f0f; /* Dark red */
-    color: white;
-    height: 100vh; /* Full height */
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0b0d21, #320d0e);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: relative;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: #1e90ff; /* Blue */
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    padding: 0 20px;
   }
   
   .home-header {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   
-  .auth-buttons button {
-    margin: 0 10px;
-    background-color: #1e90ff; /* Blue buttons */
+  .home-title {
+    max-width: 50%;
+  }
+  
+  .home-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff4d4d; /* Dark red */
+  }
+  
+  .home-title p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .login-btn,
+  .signup-btn {
+    background: #0066cc; /* Blue */
     color: white;
+    border: none;
     padding: 10px 20px;
     font-size: 1rem;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
   }
   
-  .auth-buttons button:hover {
-    background-color: #0044cc; /* Darker blue on hover */
+  .login-btn:hover,
+  .signup-btn:hover {
+    background: #004d99; /* Darker blue */
   }
   
-  /* Blur effect */
-  .blur {
-    filter: blur(5px);
-    pointer-events: none; /* Disable interactions when blurred */
-  }
-  
-  /* Modal styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .main {
+    flex: 1;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
-  .modal-content {
-    background: white;
+  .home-main {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .intro-section {
+    margin-bottom: 40px;
+  }
+  
+  .intro-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .highlight-item {
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    max-width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .highlight-item h3 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+  }
+  
+  .highlight-item p {
+    color: #cccccc;
   }
   
