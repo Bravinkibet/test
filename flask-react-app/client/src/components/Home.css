@@ -1,105 +1,135 @@
-/* General Home Page Styling */
-.home-container {
+/* General Styling */
+body {
+    margin: 0;
     font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    background: linear-gradient(135deg, #0b0d21, #320d0e);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
+    background: linear-gradient(135deg, #290036, #1a0033, #330033);
+    color: white;
   }
   
-  .home-header {
-    width: 100%;
-    padding: 20px 0;
+  /* Navbar */
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
   }
   
-  .home-title {
-    max-width: 50%;
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4d4d;
   }
   
-  .home-title h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #ff4d4d; /* Dark red */
-  }
-  
-  .home-title p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  
-  .auth-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .login-btn,
-  .signup-btn {
-    background: #0066cc; /* Blue */
-    color: white;
-    border: none;
+  .nav-links .nav-btn {
+    margin-left: 15px;
     padding: 10px 20px;
-    font-size: 1rem;
+    border: none;
+    background: #0066cc;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
   }
   
-  .login-btn:hover,
-  .signup-btn:hover {
-    background: #004d99; /* Darker blue */
+  .nav-links .signup {
+    background: #ff4d4d;
   }
   
-  .main {
-    flex: 1;
-    width: 100%;
+  .nav-btn:hover {
+    opacity: 0.8;
   }
   
-  .home-main {
+  /* Main Banner */
+  .main-banner {
     text-align: center;
+    padding: 80px 20px;
+    background: url('../components/1.jpeg') no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .main-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    color: #ff4d4d;
+  }
+  
+  .banner-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  .action-buttons .btn {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .btn-login {
+    background: #0066cc;
+    color: white;
+  }
+  
+  .btn-signup {
+    background: #ff4d4d;
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Products Section */
+  .products-section {
     padding: 50px 20px;
+    text-align: center;
   }
   
-  .intro-section {
-    margin-bottom: 40px;
-  }
-  
-  .intro-section h2 {
+  .products-section h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   
-  .intro-section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  .highlights {
+  .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    margin-top: 20px;
   }
   
-  .highlight-item {
-    background: rgba(255, 255, 255, 0.1);
+  .product-item {
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   
-  .highlight-item h3 {
-    color: #ff4d4d;
-    margin-bottom: 10px;
+  .lingerie {
+    background: #ff4d4d;
   }
   
-  .highlight-item p {
-    color: #cccccc;
+  .gadgets {
+    background: #0066cc;
+  }
+  
+  .cbd {
+    background: #00cc66;
   }
   

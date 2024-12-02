@@ -4,40 +4,39 @@ import "./Home.css";
 const Home = ({ toggleLogin, toggleSignup }) => {
   return (
     <div className="home-container">
-      <header className="home-header">
-        <div className="home-title">
-          <h1>Welcome to The Store</h1>
-          <p>Your one-stop shop for exclusive products & connections</p>
-        </div>
-        <div className="auth-buttons">
-          <button className="login-btn" onClick={toggleLogin}>
+      <nav className="navbar">
+        <div className="logo">The Store</div>
+        <div className="nav-links">
+          <button className="nav-btn" onClick={toggleLogin}>
             Log In
           </button>
-          <button className="signup-btn" onClick={toggleSignup}>
+          <button className="nav-btn signup" onClick={toggleSignup}>
             Sign Up
           </button>
         </div>
+      </nav>
+      <header className="main-banner">
+        <div className="banner-content">
+          <h1>Welcome to The Store</h1>
+          <p>Discover exclusive products curated just for you.</p>
+          <div className="action-buttons">
+            <button className="btn btn-login" onClick={toggleLogin}>
+              Log In
+            </button>
+            <button className="btn btn-signup" onClick={toggleSignup}>
+              Sign Up
+            </button>
+          </div>
+        </div>
       </header>
-      <main className="home-main">
-        <section className="intro-section">
-          <h2>Explore Our Features</h2>
-          <p>Shop unique products, connect with others, and enjoy exclusive offers.</p>
-        </section>
-        <section className="highlights">
-          <div className="highlight-item">
-            <h3>Lingerie</h3>
-            <p>Premium quality, stylish, and comfortable.</p>
-          </div>
-          <div className="highlight-item">
-            <h3>Sex Toys</h3>
-            <p>Discreet, affordable, and fun options for everyone.</p>
-          </div>
-          <div className="highlight-item">
-            <h3>CBD & Cannabis</h3>
-            <p>Top-notch, discounted, and legit products.</p>
-          </div>
-        </section>
-      </main>
+      <section className="products-section">
+        <h2>Our Products</h2>
+        <div className="product-grid">
+          <div className="product-item lingerie">Lingerie</div>
+          <div className="product-item gadgets">Gadgets</div>
+          <div className="product-item cbd">CBD Products</div>
+        </div>
+      </section>
     </div>
   );
 };
