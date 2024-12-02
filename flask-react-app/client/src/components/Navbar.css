@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #1a1f2b; /* Blue accent */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
